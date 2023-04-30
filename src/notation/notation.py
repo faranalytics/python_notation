@@ -20,8 +20,6 @@ class Notation:
 
     def __call__(self, *args, **kwargs):
         def decorator(fn):
-            print('function argument', fn)
             self.__dict__[fn] = {**{index:arg for index, arg in enumerate(args)}, **kwargs}
             return fn
-        print('decorator function', decorator)
         return decorator
