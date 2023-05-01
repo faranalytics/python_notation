@@ -7,7 +7,7 @@ class Notation:
         return self.__dict__[key]
 
     def __setitem__(self, key, value):
-        self.__dict__[name] = value
+        self.__dict__[key] = value
 
     def __str__(self):
         return str(self.__dict__)
